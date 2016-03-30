@@ -160,7 +160,11 @@ public class SmartSA extends Activity {
 								ORBMat.get(0, 0, bytes);			//Get the byte array of ORB Mat
 								//Log.e("BYTES", Arrays.toString(bytes));
 
-								int z = 0;   
+								dataSend.writeInt(Config.BigtoLittle32(bytes.length));
+								Log.e("bytes.length", Integer.toString(bytes.length));
+								dataSend.write(bytes);
+								Log.e("sb",  Arrays.toString(bytes));
+								/*int z = 0;   
 						        StringBuffer sb = new StringBuffer();
 								for (int x = 0; x < (int)ORBMatSize.height; x++){
 									for (int y = 0; y < (int)ORBMatSize.width; y++){
@@ -173,12 +177,10 @@ public class SmartSA extends Activity {
 								        }
 								     }
 								}
-
 								dataSend.writeInt(Config.BigtoLittle32(sb.toString().getBytes("utf-8").length));
 								Log.e("bytes.length", Integer.toString(sb.toString().getBytes("utf-8").length));
-
 								dataSend.write(sb.toString().getBytes("utf-8"));						
-							    Log.e("sb",  Arrays.toString(sb.toString().getBytes("utf-8")));
+							    Log.e("sb",  Arrays.toString(sb.toString().getBytes("utf-8")));*/
 							    
 								dataSend.flush();
 								Log.e(TAG, file.getName());
@@ -232,6 +234,7 @@ public class SmartSA extends Activity {
 								
 								Log.e("sendImages.length", Integer.toString(sendImages.length));
 								Log.i(TAG, file1.getName());
+								
 								//sendImages = new byte[picsize];
 								//while ((length = fos.read(sendImages, 0,
 									//	sendImages.length)) > 0) {

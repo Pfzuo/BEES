@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFF0F8FF"
+    tools:context="com.hust.smartsa.Main" >
+
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="25sp"
+                android:text="@string/text_ip" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="4"
+            android:digits="0123456789."
+            android:singleLine="true"
+            android:textSize="25sp"
+            android:text="115.156.209.88" >
+        </EditText>
+    </LinearLayout>
+    
+
+     <Button
+        android:id="@+id/btn_directupload"
+        style="@style/btnStyleSandrift"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="25sp"
+        android:text="Direct Upload" />
+      <Button
+        android:id="@+id/btn_smartsa"
+        style="@style/btnStyleOrange"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:textSize="25sp"
+        android:text="SmartSA" />
+
+</LinearLayout>

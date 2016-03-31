@@ -99,10 +99,13 @@ public class SmartSA extends Activity {
 			public void run() {
 				
 				//	The resolution compression proportion for energy-aware feature extraction
-				float extractCompressRatio = (float)(0.4-0.4*remEnergy/100);
+				float extractCompressRatio = (float)(1-(0.4-0.4*remEnergy/100));
 				
 				//	The resolution compression proportion for energy-aware image upload
-				float uploadCompressRatio = (float)(0.8-0.8*remEnergy/100);
+				float uploadCompressRatio = (float)(1-(0.8-0.8*remEnergy/100));
+				
+				Log.e("extractCompressRatio", Float.toString(extractCompressRatio));
+				Log.e("uploadCompressRatio", Float.toString(uploadCompressRatio));
 				
 				File dir = new File(Config.IMAGE_DIR + imagePath.getText().toString() + "/");
 				File[] directoryListing = dir.listFiles();
@@ -136,10 +139,12 @@ public class SmartSA extends Activity {
 
 						try {
 							for (File file : directoryListing) {
-								Bitmap bitmap = BitmapFactory.decodeFile(file
-										.getAbsolutePath());
+								final BitmapFactory.Options options = new BitmapFactory.Options();
+								options.inSampleSize = 8;
+								Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
 								Matrix matrix = new Matrix();
 								matrix.postScale(extractCompressRatio, extractCompressRatio);
+
 								newBitmap = Bitmap.createBitmap(bitmap, 0,
 										0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
 
@@ -163,24 +168,6 @@ public class SmartSA extends Activity {
 								dataSend.writeInt(Config.BigtoLittle32(bytes.length));
 								Log.e("bytes.length", Integer.toString(bytes.length));
 								dataSend.write(bytes);
-								Log.e("sb",  Arrays.toString(bytes));
-								/*int z = 0;   
-						        StringBuffer sb = new StringBuffer();
-								for (int x = 0; x < (int)ORBMatSize.height; x++){
-									for (int y = 0; y < (int)ORBMatSize.width; y++){
-										sb.append(bytes[(int)(x * ORBMatSize.width + y)]);
-								        z ++;
-								        sb.append(" ");
-								        if(z == 32){
-								              sb.append("\n");
-								              z = 0;
-								        }
-								     }
-								}
-								dataSend.writeInt(Config.BigtoLittle32(sb.toString().getBytes("utf-8").length));
-								Log.e("bytes.length", Integer.toString(sb.toString().getBytes("utf-8").length));
-								dataSend.write(sb.toString().getBytes("utf-8"));						
-							    Log.e("sb",  Arrays.toString(sb.toString().getBytes("utf-8")));*/
 							    
 								dataSend.flush();
 								Log.e(TAG, file.getName());
@@ -234,13 +221,7 @@ public class SmartSA extends Activity {
 								
 								Log.e("sendImages.length", Integer.toString(sendImages.length));
 								Log.i(TAG, file1.getName());
-								
-								//sendImages = new byte[picsize];
-								//while ((length = fos.read(sendImages, 0,
-									//	sendImages.length)) > 0) {
-								//	dataSend.write(sendImages, 0, length);
-								//	dataSend.flush();
-								//}								
+														
                     		 }
                     		 i ++;
 						}

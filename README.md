@@ -28,8 +28,8 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 
 ## Contact
 
-The contributors of implementing SmartSA: [Jie Wu](https://github.com/courageJ), Pengfei Zuo, Zhou Feng, Shunde Cao, Yuncheng Guo
+The contributors of implementing SmartSA: Pengfei Zuo, [Jie Wu](https://github.com/courageJ), Zhou Feng, Shunde Cao, Yuncheng Guo
 
 Email: pfzuo@hust.edu.cn
 
-if you have any questions, please feel free to contact me. 
+If you have any questions, please feel free to contact me. 

@@ -66,11 +66,6 @@ public class SmartSA extends Activity {
 				// TODO Auto-generated method stub
 				Log.e("battery************", Integer.toString(battery));
 				uploadImages(battery);
-				
-				// Extract ORB
-				// Upload ORB
-				// Receive results
-				// Upload images
 			}
 		});
 		
@@ -91,7 +86,7 @@ public class SmartSA extends Activity {
 		}
 	};
 	
-	//Upload images using SmartSA
+	//	Upload images using SmartSA
 	public void uploadImages(final int remEnergy) {
 		
 		Runnable uploadRun = new Runnable() {
@@ -109,10 +104,8 @@ public class SmartSA extends Activity {
 				
 				File dir = new File(Config.IMAGE_DIR + imagePath.getText().toString() + "/");
 				File[] directoryListing = dir.listFiles();
+				
 				/*if(!dir.isDirectory() || directoryListing.length == 0){
-				    Intent intent=new Intent(SmartSA.this, Main.class);
-				    finish();
-				    startActivity(intent);
 				}*/
 				
 				Bitmap newBitmap = null;
@@ -137,19 +130,21 @@ public class SmartSA extends Activity {
 						int length = 0;
 						int matbytes = 0;
 
+						// Extract and upload the ORB keypoints
 						try {
 							for (File file : directoryListing) {
 								final BitmapFactory.Options options = new BitmapFactory.Options();
 								options.inSampleSize = 8;
 								Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
 								Matrix matrix = new Matrix();
-								matrix.postScale(extractCompressRatio, extractCompressRatio);
+								matrix.postScale(extractCompressRatio, extractCompressRatio); // Resolution compression
 
 								newBitmap = Bitmap.createBitmap(bitmap, 0,
 										0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
 
-								ORBMat = ORB.extractImageORBDescriptors(newBitmap);										//Log.e(TAG, "Width:" + resultBitmap.getWidth() + ", Height:" + resultBitmap.getHeight());
-								ORBMat.dump();
+								ORBMat = ORB.extractImageORBDescriptors(newBitmap);
+								//	Log.e(TAG, "Width:" + resultBitmap.getWidth() + ", Height:" + resultBitmap.getHeight());
+								//ORBMat.dump();
 								//	Log.e("dump", ORBMat.dump());
 
 								matbytes = (int) (ORBMat.width() * ORBMat.height());
@@ -160,7 +155,6 @@ public class SmartSA extends Activity {
 								Log.e("col", Integer.toString(col));
 								Log.e("row", Integer.toString(row));
 							   
-								Size ORBMatSize = ORBMat.size();
 								byte[] bytes = new byte[(int) (ORBMat.width() * ORBMat.height())];
 								ORBMat.get(0, 0, bytes);			//Get the byte array of ORB Mat
 								//Log.e("BYTES", Arrays.toString(bytes));
@@ -181,7 +175,7 @@ public class SmartSA extends Activity {
 						}
 
 						
-						Log.e(TAG, "Receive feedback!");
+						// Receive the results of redundancy detection
 						int[] feedback = new int[imageNum];
 	                    int len = 0; 
 	                    int sendImagesNum = 0;
@@ -194,25 +188,23 @@ public class SmartSA extends Activity {
                     	 Log.e("feedback", Arrays.toString(feedback));
                     	 Log.e(TAG, "Receive feedback over!");
 
-                    	java.io.FileInputStream fos;
+                    	 
+                    	//	Send the unique images to the server
 						dataSend.writeInt(Config.BigtoLittle32(sendImagesNum));
 						Log.e("sendImagesNum", Integer.toString(sendImagesNum));
                     	
                     	int i = 0;
 						for (File file1 : directoryListing) {
                     		if(feedback[i] == 1){
-								fos = new FileInputStream(file1.getAbsolutePath());
-								//picsize = fos.available();
-								//dataSend.writeInt(Config.BigtoLittle32(picsize));
-								Bitmap sendBitmap = BitmapFactory.decodeFile(file1.getAbsolutePath());
-								
+                    			java.io.FileInputStream fos = new FileInputStream(file1.getAbsolutePath());
+								Bitmap sendBitmap = BitmapFactory.decodeFile(file1.getAbsolutePath());								
 								Matrix sendMatrix = new Matrix();
-								sendMatrix.postScale(uploadCompressRatio, uploadCompressRatio);
+								sendMatrix.postScale(uploadCompressRatio, uploadCompressRatio); // Resolution compression
 								Bitmap newSendBitmap = Bitmap.createBitmap(sendBitmap, 0,
 										0, sendBitmap.getWidth(), sendBitmap.getHeight(), sendMatrix, true);
 								
 								ByteArrayOutputStream baos = new ByteArrayOutputStream();
-								newSendBitmap.compress(Bitmap.CompressFormat.JPEG, 85, baos);
+								newSendBitmap.compress(Bitmap.CompressFormat.JPEG, 85, baos); // Quality compression
 								byte[] sendImages  = baos.toByteArray();
 
 								dataSend.writeInt(Config.BigtoLittle32(sendImages.length));
@@ -248,8 +240,8 @@ public class SmartSA extends Activity {
 		AlertDialog.Builder dialog = new AlertDialog.Builder(SmartSA.this);
 		    dialog.setTitle("SmartSA")
 		    .setIcon(android.R.drawable.ic_dialog_info)
-		    .setMessage("Upload successfully!")
-		    .setPositiveButton("Sure", new DialogInterface.OnClickListener() {		
+		    .setMessage("Upload finished!")
+		    .setPositiveButton("OK", new DialogInterface.OnClickListener() {		
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub

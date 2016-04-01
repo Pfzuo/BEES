@@ -21,11 +21,11 @@ public class Config {
 	public static String getSDPath() {
 		File sdDir = null;
 		boolean sdCardExist = Environment.getExternalStorageState().equals(
-				android.os.Environment.MEDIA_MOUNTED); // Determine whether SD card exists
+				android.os.Environment.MEDIA_MOUNTED); 
 
 		if (sdCardExist) // 
 		{
-			sdDir = Environment.getExternalStorageDirectory();// Get the directory
+			sdDir = Environment.getExternalStorageDirectory();
 		}
 		return sdDir.toString();
 

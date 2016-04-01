@@ -107,7 +107,7 @@ public class Main extends Activity {
 
 	public void onResume() {
 		super.onResume();
-		// Loads and initializes OpenCV library using OpenCV Engine service.
+		// Load and initialize OpenCV library using OpenCV Engine service.
 		// You can choose it.
 		OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_11, this,
 				mLoaderCallback);

@@ -36,7 +36,7 @@
             android:digits="0123456789."
             android:singleLine="true"
             android:textSize="25sp"
-            android:text="115.156.209.161" >
+            android:text="192.168.1.1" >
         </EditText>
     </LinearLayout>
     

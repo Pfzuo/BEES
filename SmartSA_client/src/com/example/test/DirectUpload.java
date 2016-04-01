@@ -113,8 +113,8 @@ public class DirectUpload extends Activity {
 				 AlertDialog.Builder dialog = new AlertDialog.Builder(DirectUpload.this);
 				    dialog.setTitle("Direct Upload")
 				    .setIcon(android.R.drawable.ic_dialog_info)
-				    .setMessage("Upload successfully!")
-				    .setPositiveButton("Sure", new DialogInterface.OnClickListener() {		
+				    .setMessage("Upload finished!")
+				    .setPositiveButton("OK", new DialogInterface.OnClickListener() {		
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						// TODO Auto-generated method stub

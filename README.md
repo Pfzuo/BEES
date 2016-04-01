@@ -33,12 +33,12 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 
 ### Install
 
->make
+> make
 > 1. generate orb library 
-> ./orblib_init $(images directory)
+>> ./orblib_init $(images directory)
 > 
 > 2. start server service 
-> ./server
+>> ./server
 
 ## Contact
 

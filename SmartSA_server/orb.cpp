@@ -3,7 +3,7 @@
  * author: Jie Wu(courageJ)
 */
 
-#include "basic_header.h"
+#include "config.h"
 #include "orb.h"
 #include <string>
 #include <dirent.h>

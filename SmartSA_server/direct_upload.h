@@ -1,5 +1,5 @@
 /*
- * direct upload strategy of images from the client
+ * direct upload  
  * author: Jie Wu(courageJ)
 */
 

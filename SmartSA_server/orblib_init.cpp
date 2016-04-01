@@ -4,7 +4,7 @@
 */
 
 #include <iostream>
-#include "basic_header.h"
+#include "config.h"
 #include "orb.h"
 #include <opencv2/opencv.hpp>
 #include <opencv2/nonfree/nonfree.hpp>

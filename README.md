@@ -36,8 +36,8 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 > 1. Makefile
 >> make 	
 >
-> 2. Generate the ORB library: extract the ORB keypoints of images in "/image" and put them in "/orblib"
->> ./orblib_init /imagelib
+> 2. Generate the ORB library: extract the ORB keypoints of images in "/imagelib" and put them in "/orblib"
+>> ./orblib_init  /imagelib
 > 
 > 3. Start the server 
 >> ./server

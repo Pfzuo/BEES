@@ -2,7 +2,7 @@
  * the implementation for the functions in SmartSA_upload.h
  * author: Jie Wu(courageJ)
 */
-#include "basic_header.h"
+#include "config.h"
 #include "direct_upload.h"
 #include "SmartSA_upload.h"
 #include "orb.h"

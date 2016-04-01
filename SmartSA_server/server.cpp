@@ -4,7 +4,7 @@
 */
 #include <iostream>
 #include <string.h> 
-#include "basic_header.h"
+#include "config.h"
 #include "direct_upload.h"
 #include "SmartSA_upload.h"
 #include "orb.h"

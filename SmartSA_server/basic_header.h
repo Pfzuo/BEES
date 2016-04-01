@@ -14,7 +14,7 @@
 #define LISTENQ 128 // the length of listen queue
 #define MAXLEN 1024 // the maximum length of buffer
 
-#define IMAGE_DIR "./image/" //the image library
+#define IMAGE_DIR "./imagelib/" //the image library
 #define ORBLIB_DIR "./orblib/" //the orb library
 #define TMP_ORB_DIR "./tmporb/" //temporary orb files
 

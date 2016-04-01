@@ -13,12 +13,12 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 
 ### Environment
 >Android 4.4
+
 ### Dependencies
 
 >1. [OpenCV Library for Android - 2.4.11] (http://opencv.org/downloads.html)
 2. v7-appcompat
 
-### Install
 
 ## The server
 ---

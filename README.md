@@ -1,5 +1,4 @@
 # SmartSA
----
 
 An Energy-aware Image Sharing System for Real-time Situation Awareness in Disasters
 
@@ -14,11 +13,11 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 
 
 ### Environment
->Android 4.4
+> Android 4.4
 
 ### Dependencies
 
->1. [OpenCV Library for Android - 2.4.11] (http://opencv.org/downloads.html)
+> 1. [OpenCV Library for Android - 2.4.11] (http://opencv.org/downloads.html)
 2. v7-appcompat
 
 
@@ -26,15 +25,15 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 
 
 ### Environment
->Linux 32bit
+> Linux 32bit
 
 ### Dependencies
->1. [OpenCV library for Linux - 2.4.11] (http://opencv.org/downloads.html)
+> 1. [OpenCV library for Linux - 2.4.11] (http://opencv.org/downloads.html)
 
 ### Install
 
->make
-./server
+> make
+> ./server
 
 ## Contact
 

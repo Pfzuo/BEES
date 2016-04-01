@@ -34,7 +34,6 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 ### Install
 
 >make
-
 ./server
 
 ## Contact

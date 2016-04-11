@@ -29,18 +29,18 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 >Linux 64bit
 
 ### Dependencies
->1. [OpenCV library for Linux - 2.4.11] (http://opencv.org/downloads.html)
+> [OpenCV library for Linux - 2.4.11] (http://opencv.org/downloads.html)
 
 ### Install
 
 > 1. Makefile
->> make 	
+>> `make` 	
 >
 > 2. Generate the ORB library: extract the ORB keypoints of images in "./imagelib" and put them in "./orblib"
->> ./orblib_init  ./imagelib
+>> `./orblib_init  ./imagelib`
 > 
 > 3. Start the server 
->> ./server
+>> `./server`
 
 ## Contact
 

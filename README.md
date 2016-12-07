@@ -1,8 +1,8 @@
 # BEES
 
-BEE is a bandwidth- and energy- efficient image sharing system framework to offer real-time situation awareness in disasters.
+BEES is a bandwidth- and energy- efficient image sharing system framework for real-time situation awareness in disasters.
 
-## The BEES paper
+## The BEES papers
 
 Pengfei Zuo, Yu Hua, Dan Feng, Zhenhua Nie, Min Fu, Yuanyuan Sun, "E-STORE: An Energy-constrained Smartphone Storage for Near Real-time Disaster Image Sharing", Poster in the 13th USENIX Conference on File and Storage Technologies (FAST), February, 2015.
 

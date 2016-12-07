@@ -1,12 +1,12 @@
-# SmartSA
+# BEES
 
-An Energy-aware Image Sharing System for Real-time Situation Awareness in Disasters
+BEE is a bandwidth- and energy- efficient image sharing system framework to offer real-time situation awareness in disasters.
 
-## The SmartSA paper
+## The BEES paper
 
 Pengfei Zuo, Yu Hua, Dan Feng, Zhenhua Nie, Min Fu, Yuanyuan Sun, "E-STORE: An Energy-constrained Smartphone Storage for Near Real-time Disaster Image Sharing", Poster in the 13th USENIX Conference on File and Storage Technologies (FAST), February, 2015.
 
-Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Sun, Zhou Feng, Yuncheng Guo, "SmartSA: An Energy-aware Image Sharing System for Real-time Situation Awareness in Disasters", submitted to USENIX ATC 2016.
+Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Sun, Yuncheng Guo, "BEES: Bandwidth- and Energy- Efficient Image Sharing for Real-time Situation Awareness", submitted to ICDCS 2017.
 
 
 ## The client
@@ -44,7 +44,6 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 
 ## Contact
 
-The contributors of implementing SmartSA: Pengfei Zuo, [Jie Wu](https://github.com/courageJ), Zhou Feng, Shunde Cao, Yuncheng Guo
 
 Email: pfzuo@hust.edu.cn
 

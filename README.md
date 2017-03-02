@@ -4,9 +4,9 @@ BEES is a bandwidth- and energy- efficient image sharing system framework for re
 
 ## The BEES papers
 
-Pengfei Zuo, Yu Hua, Dan Feng, Zhenhua Nie, Min Fu, Yuanyuan Sun, "E-STORE: An Energy-constrained Smartphone Storage for Near Real-time Disaster Image Sharing", Poster in the 13th USENIX Conference on File and Storage Technologies (FAST), February, 2015.
+Pengfei Zuo, Yu Hua, Dan Feng, Zhenhua Nie, Min Fu, Yuanyuan Sun, "E-STORE: An Energy-constrained Smartphone Storage for Near Real-time Disaster Image Sharing", Poster in the 13th USENIX Conference on File and Storage Technologies (FAST), 2015.
 
-Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Sun, Yuncheng Guo, "BEES: Bandwidth- and Energy- Efficient Image Sharing for Real-time Situation Awareness", submitted to ICDCS 2017.
+Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Sun, Yuncheng Guo, "BEES: Bandwidth- and Energy- Efficient Image Sharing for Real-time Situation Awareness", in Proceedings of the 37th International Conference on Distributed Computing Systems (ICDCS), 2017.
 
 
 ## The client

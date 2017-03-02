@@ -26,10 +26,10 @@ Pengfei Zuo, Yu Hua, Xue Liu, Dan Feng, Wen Xia, Shunde Cao, Jie Wu, Yuanyuan Su
 
 
 ### Environment
->Linux 64bit
+> Linux 64bit
 
 ### Dependencies
-> [OpenCV library for Linux - 2.4.11] (http://opencv.org/downloads.html)
+> [OpenCV Library for Linux - 2.4.11] (http://opencv.org/downloads.html)
 
 ### Install
 
